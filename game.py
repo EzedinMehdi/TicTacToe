@@ -1,4 +1,3 @@
-from random import randint
 board = [
     ["1", "2", "3"],
     ["4", "5", "6"],
@@ -55,25 +54,6 @@ def mark2(computer):
         print('only enter 1-9')
 
 
-def gameOver():
-    if board[0][0] == board[0][1] == board[0][2]:
-        return False
-    elif board[1][0] == board[1][1] == board[1][2]:
-        return False
-    elif board[2][0] == board[2][1] == board[2][2]:
-        return False
-    elif board[0][0] == board[1][0] == board[2][0]:
-        return False
-    elif board[0][1] == board[1][1] == board[2][1]:
-        return False
-    elif board[0][2] == board[1][2] == board[2][2]:
-        return False
-    elif board[0][0] == board[1][1] == board[2][2]:
-        return False
-    elif board[0][2] == board[1][1] == board[2][0]:
-        return False
-    else:
-        return True
 
 
 def print_board():
@@ -117,6 +97,8 @@ while True:
             
             print("Player X wins!!!")
             break
+
+    
         player2 = int(input("player O enter your move: "))
         mark2(player2)
 
